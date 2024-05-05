@@ -1,12 +1,20 @@
 import Ninjas from "./Ninjas";
 
 function App() {
+
+  const state = {
+    ninjas: [
+      {name: "Ryu", age: 30, belt: "black", id: 1,},
+      {name: "Yoshi", age: 20, belt: "green", id: 2,},
+      {name: "Crystal", age: 25, belt: "pink", id: 3,},
+    ]
+  }
+
   return (
     <div className="App">
       <h1>My second React app</h1>
       <p>Welcome!</p>
-      <Ninjas name="Ryu" age="30" belt="Black" />
-      <Ninjas name="Yoshi" age="35" belt="Green" />
+      <Ninjas ninjas={state.ninjas}/>
     </div>
   );
 }

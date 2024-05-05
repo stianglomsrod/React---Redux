@@ -1,10 +1,14 @@
-const Ninjas = ({ name, age, belt }) => {
+const Ninjas = ({ ninjas }) => {
+
   return (
-    <div className="ninja">
-      <div>Name: {name}</div>
-      <div>Age: {age}</div>
-      <div>Belt: {belt}</div>
-    </div>
+    ninjas.map((ninja) => {
+        return(<div className="ninja" key={ninja.id}>
+            <div>Name: {ninja.name}</div>
+            <div>Age: {ninja.age}</div>
+            <div>Belt: {ninja.belt}</div>
+            <br />
+        </div>)
+    })
   );
 };
 
